@@ -1,4 +1,4 @@
-name: BanItems:
+name: 7cBans
 main: me.skymc.banitem.BanItems
 version: {$VERSION}
 

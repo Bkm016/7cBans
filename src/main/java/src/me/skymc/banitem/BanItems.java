@@ -91,7 +91,8 @@ public class BanItems extends JavaPlugin implements Listener {
 		for (String condition : conf.getStringList("condition")) {
 			try {
 				if (condition.startsWith("type")) {
-					if (condition.split("=")[1].equals(item.getTypeId() + ":" + item.getDurability())) {
+					if (condition.split("=")[1].equals(item.getTypeId() + ":" + item.getDurability()) 
+							|| condition.split("=")[1].equals(item.getTypeId() + ":*")) {
 						return true;
 					}
 				}
