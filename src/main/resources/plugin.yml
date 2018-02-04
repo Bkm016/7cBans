@@ -1,0 +1,7 @@
+name: BanItems:
+main: me.skymc.banitem.BanItems
+version: {$VERSION}
+
+commands:
+  banitems:
+    permission: banitems.admin

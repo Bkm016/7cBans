@@ -1,0 +1,23 @@
+# 监听器
+# 更改后必须重启服务器
+events:
+  # 背包点击
+  InventoryClick: true
+  # 玩家交互
+  PlayerInteract: true
+  # 物品捡拾
+  PlayerPickupItem: true
+  
+# 提示信息
+message: '该物品已被封禁'
+  
+# 判断条件
+# 目前不支持小数和其他类型
+condition:
+# 判断材质
+- 'type=137:0'
+# 整数类型 NBT
+- 'nbt[int]=RepairCounter:100'
+- 'nbt[int]=SpecialAttackType:1001'
+# 文本类型 NBT
+- 'nbt[text]=SpecialXXXXXType:牛逼'
