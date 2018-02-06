@@ -7,6 +7,8 @@ events:
   PlayerInteract: true
   # 物品捡拾
   PlayerPickupItem: true
+  # 物品丢弃
+  PlayerDropItem: true
   
 # 提示信息
 message: '该物品已被封禁'

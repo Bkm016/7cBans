@@ -16,6 +16,7 @@ import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import lombok.Getter;
+import me.skymc.banitem.listener.ListenerDropItem;
 import me.skymc.banitem.listener.ListenerInteract;
 import me.skymc.banitem.listener.ListenerInventoryClick;
 import me.skymc.banitem.listener.ListenerPickupItem;
@@ -70,6 +71,10 @@ public class BanItems extends JavaPlugin implements Listener {
 		if (conf.getBoolean("events.PlayerPickupItem")) {
 			Bukkit.getPluginManager().registerEvents(new ListenerPickupItem(), this);
 			MsgUtils.send("启用物品捡拾监听", this);
+		}
+		if (conf.getBoolean("events.PlayerDropItem")) {
+			Bukkit.getPluginManager().registerEvents(new ListenerDropItem(), this);
+			MsgUtils.send("启用物品丢弃监听", this);
 		}
 	}
 	
